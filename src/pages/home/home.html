@@ -17,4 +17,7 @@
   <input type="text" [(ngModel)]="twitter" >
   <h2>Click</h2>
   <button ion-button (click)="showAlert()">Click me!!</button>
+  <h1>local variable</h1>
+  <p #myVar>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quibusdam ullam porro quaerat, debitis repellendus aspernatur quod eum omnis itaque recusandae dolore iste laboriosam numquam eius? Laboriosam provident architecto, officiis.</p>
+  <button ion-button (click)="changeHtml( myVar )">Change me!!</button>
 </ion-content>

@@ -40,6 +40,10 @@ export class HomePage {
     alert('Hola');
   }
 
+  changeHtml( element: HTMLElement ){
+    element.innerHTML = 'bla bla bla';
+  }
+
 }
 
 
