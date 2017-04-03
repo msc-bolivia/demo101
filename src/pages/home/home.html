@@ -20,4 +20,14 @@
   <h1>local variable</h1>
   <p #myVar>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quibusdam ullam porro quaerat, debitis repellendus aspernatur quod eum omnis itaque recusandae dolore iste laboriosam numquam eius? Laboriosam provident architecto, officiis.</p>
   <button ion-button (click)="changeHtml( myVar )">Change me!!</button>
+  <h1>NgIf</h1>
+  <input type="text" [(ngModel)]="twitter">
+  <button ion-button *ngIf="twitter == 'nicobytes'">Show me!</button>
+  <button ion-button *ngIf="twitter != 'nicobytes'">hide me!</button>
+  <h1>ngFor</h1>
+  <ul>
+    <li *ngFor="let name of names">
+      {{ name }}
+    </li>
+  </ul>
 </ion-content>

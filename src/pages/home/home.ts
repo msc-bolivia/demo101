@@ -10,6 +10,7 @@ import { Person } from '../../models/person.model';
 export class HomePage {
 
   twitter: string = '@dkjsfhkadf';
+  names: string[] = ['camila', 'zulema', 'sandra', 'lina', 'monica', 'kattya'];
 
   constructor(public navCtrl: NavController) {
     let person1 = new Person('nicolas', 52);
