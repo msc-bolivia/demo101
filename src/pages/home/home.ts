@@ -9,6 +9,8 @@ import { Person } from '../../models/person.model';
 })
 export class HomePage {
 
+  twitter: string = '@dkjsfhkadf';
+
   constructor(public navCtrl: NavController) {
     let person1 = new Person('nicolas', 52);
     let name = person1.getName();
@@ -27,6 +29,15 @@ export class HomePage {
     let name3 = person3.getName();
     console.log( name3 );
     console.log( person3.getAge() );
+  }
+
+
+  updateTwitter( value ){
+    this.twitter = value;
+  }
+
+  showAlert(){
+    alert('Hola');
   }
 
 }

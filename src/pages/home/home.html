@@ -7,8 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h1>Hola mundo {{ twitter }}</h1>
+  <h2>Value:</h2>
+  <input type="text" [value]="twitter">
+  <input type="text" value="twitter">
+  <h2>Data binding:</h2>
+  <input type="text" [value]="twitter" (input)="updateTwitter( $event.target.value )" >
+  <h2>ngModel:</h2>
+  <input type="text" [(ngModel)]="twitter" >
+  <h2>Click</h2>
+  <button ion-button (click)="showAlert()">Click me!!</button>
 </ion-content>
