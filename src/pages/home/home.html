@@ -25,7 +25,11 @@
   <button ion-button *ngIf="twitter == 'nicobytes'">Show me!</button>
   <button ion-button *ngIf="twitter != 'nicobytes'">hide me!</button>
   <h1>ngFor</h1>
+  <input type="text" [(ngModel)]="newName">
+  <button ion-button (click)="addName( newName )">add</button>
+  <button ion-button (click)="removeName()">remove</button>
   <ul>
+    <li *ngIf="names.length == 0">No hay items</li>
     <li *ngFor="let name of names">
       {{ name }}
     </li>

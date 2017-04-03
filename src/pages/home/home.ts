@@ -10,6 +10,7 @@ import { Person } from '../../models/person.model';
 export class HomePage {
 
   twitter: string = '@dkjsfhkadf';
+  newName: string;
   names: string[] = ['camila', 'zulema', 'sandra', 'lina', 'monica', 'kattya'];
 
   constructor(public navCtrl: NavController) {
@@ -43,6 +44,15 @@ export class HomePage {
 
   changeHtml( element: HTMLElement ){
     element.innerHTML = 'bla bla bla';
+  }
+
+  addName( name: string){
+    this.names.unshift( name );
+    this.newName = '';
+  }
+
+  removeName(){
+    this.names.splice(0,1);
   }
 
 }
