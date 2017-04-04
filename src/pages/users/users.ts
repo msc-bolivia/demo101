@@ -9,6 +9,8 @@ import { FoodPage } from '../food/food';
 })
 export class UsersPage {
 
+  names: string[] = ['camila', 'zulema', 'sandra', 'lina', 'monica', 'kattya'];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
@@ -17,6 +19,10 @@ export class UsersPage {
 
   goToFoodPage(){
     this.navCtrl.push( FoodPage );
+  }
+
+  clickItem(name: string){
+    alert('hola ' + name);
   }
 
 }

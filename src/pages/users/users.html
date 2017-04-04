@@ -14,6 +14,12 @@
 
 
 <ion-content padding>
+  <ul>
+    <li *ngIf="names.length == 0">No hay items</li>
+    <li tappable *ngFor="let name of names" (click)="clickItem( name )">
+      {{ name }}
+    </li>
+  </ul>
 
   <button ion-button (click)="goToFoodPage()">ir a la pagina de comida</button>
 </ion-content>
