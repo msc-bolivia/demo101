@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Person } from '../../models/person.model';
+import { UsersPage } from '../users/users';
 
 @Component({
   selector: 'page-home',
@@ -14,6 +15,7 @@ export class HomePage {
   names: string[] = ['camila', 'zulema', 'sandra', 'lina', 'monica', 'kattya'];
 
   constructor(public navCtrl: NavController) {
+
     let person1 = new Person('nicolas', 52);
     let name = person1.getName();
     console.log( name );
@@ -31,6 +33,10 @@ export class HomePage {
     let name3 = person3.getName();
     console.log( name3 );
     console.log( person3.getAge() );
+  }
+
+  goToUsersPage(){
+    this.navCtrl.push( UsersPage );
   }
 
 
